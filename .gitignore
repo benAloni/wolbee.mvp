@@ -17,3 +17,8 @@ yarn-error.log*
 # התעלמות מהתיקיות של IDEs
 .vscode/
 .idea/
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
