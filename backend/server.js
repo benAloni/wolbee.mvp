@@ -13,7 +13,11 @@ mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch((error) => console.error("Error connecting to DB:", error));
 
 const corsOptions = {
-  origin: 'https://wolbee.com','35.232.125.105','https://wolbee-mvp-kmpe.onrender.com' // Replace this with your frontend URL
+  origin: [
+    'http://wolbee.com',
+    'http://35.232.125.105', // Ensure the scheme is included
+    'https://wolbee-mvp-kmpe.onrender.com'
+  ] // Replace this with your frontend URL
 };
 
 app.use(cors(corsOptions));
